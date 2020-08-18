@@ -5,7 +5,10 @@ export default createRouter({
   routes: [
     {
       path: '/',
-      component: () => import('/@src/components/HelloWorld.vue')
+      component: () => import('/src/components/HelloWorld.vue'),
+      props: {
+        msg: 'Hello Vue 3.0 + Vite'
+      }
     }
   ],
 });
