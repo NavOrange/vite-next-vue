@@ -1,7 +1,7 @@
 import { reactive, watchEffect, computed } from 'vue'
 
 const state = reactive({
-  count: 0
+  count: 0,
 })
 
 watchEffect(() => {

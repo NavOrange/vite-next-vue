@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router'
 
 export default createRouter({
   history: createWebHistory(),
@@ -7,8 +7,8 @@ export default createRouter({
       path: '/',
       component: () => import('/src/components/HelloWorld.vue'),
       props: {
-        msg: 'Hello Vue 3.0 + Vite'
-      }
-    }
+        msg: 'Hello Vue 3.0 + Vite',
+      },
+    },
   ],
-});
+})

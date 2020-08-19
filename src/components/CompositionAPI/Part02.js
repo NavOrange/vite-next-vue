@@ -1,9 +1,10 @@
+/* eslint-disable */
 import { reactive, computed, toRefs, onMounted } from 'vue'
 
 export function useCount() {
   const state = reactive({
     count: 0,
-    double: computed(() => state.count * 2)
+    double: computed(() => state.count * 2),
   })
 
   function increment() {
@@ -18,6 +19,6 @@ export function useCount() {
   return {
     // ...toRefs(state),
     state,
-    increment
+    increment,
   }
 }

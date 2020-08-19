@@ -13,7 +13,10 @@ describe('Component', () => {
   it('mouse move', async () => {
     const wrapper = mount(Component)
     const pre = wrapper.find('pre')
-    const mouseMove = new MouseEvent('mousemove', { clientX: 100, clientY: 200 })
+    const mouseMove = new MouseEvent('mousemove', {
+      clientX: 100,
+      clientY: 200,
+    })
     window.dispatchEvent(mouseMove)
     await wrapper.vm.$nextTick()
     expect(pre.text()).toContain('100')

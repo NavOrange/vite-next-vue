@@ -28,6 +28,6 @@ export default {
   },
   mounted() {
     console.log('template is mounted!')
-  }
+  },
 }
 </script>

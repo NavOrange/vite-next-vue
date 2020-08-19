@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { ref, watchEffect } from 'vue'
 
 const count = ref(0)
