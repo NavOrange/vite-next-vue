@@ -1,4 +1,6 @@
 <template>
+  <img alt="Vue logo" src="/src/assets/logo.png" />
+
   <h1>{{ msg }}</h1>
   <button @click="count++">count is: {{ count }}</button>
   <p>

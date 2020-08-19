@@ -10,5 +10,10 @@ export default createRouter({
         msg: 'Hello Vue 3.0 + Vite',
       },
     },
+
+    {
+      path: '/migration',
+      component: () => import('/src/components/MigrationFromVue2/index.vue'),
+    },
   ],
 })
