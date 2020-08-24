@@ -1,7 +1,8 @@
 <template>
   <nav class="app__nav">
-    <router-link to="/">home</router-link>
-    <router-link to="/migration">Migration from Vue 2</router-link>
+    <router-link v-for="{ path, meta } in routes" :key="path" :to="path">
+      {{ meta.title }}
+    </router-link>
   </nav>
 
   <router-view />
@@ -10,12 +11,18 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
+import { routes } from '/src/router'
 
 export default {
   name: 'App',
   /* components: {
     HelloWorld
   } */
+  computed: {
+    routes() {
+      return routes
+    },
+  },
 }
 </script>
 
