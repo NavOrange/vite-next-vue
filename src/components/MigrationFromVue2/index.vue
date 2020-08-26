@@ -20,10 +20,15 @@
         @submit="EmitsComponentOptionSubmit"
       />
     </li>
+
+    <li>
+      <code>scheme: {{ scheme }} // inject</code>
+    </li>
   </ul>
 </template>
 
 <script>
+import { inject } from 'vue'
 import { FeatureTeleportOne, FeatureTeleportTwo } from './Teleport.jsx'
 import EmitsComponentOption from './EmitsComponentOption.jsx'
 
@@ -33,6 +38,11 @@ export default {
     FeatureTeleportOne,
     FeatureTeleportTwo,
     EmitsComponentOption,
+  },
+  setup() {
+    return {
+      scheme: inject('scheme'),
+    }
   },
   data() {
     return {

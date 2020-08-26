@@ -26,8 +26,5 @@ export default {
       y,
     }
   },
-  mounted() {
-    console.log('template is mounted!')
-  },
 }
 </script>

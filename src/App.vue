@@ -1,8 +1,18 @@
 <template>
-  <nav class="app__nav">
+  <nav class="app__nav" :class="{ [scheme]: true }">
     <router-link v-for="{ path, meta } in routes" :key="path" :to="path">
       {{ meta.title }}
     </router-link>
+
+    <select v-model="mode">
+      <option
+        v-for="value in ['light', 'dark', 'auto']"
+        :key="value"
+        :value="value"
+      >
+        {{ value }}
+      </option>
+    </select>
   </nav>
 
   <router-view />
@@ -12,32 +22,26 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import { routes } from '/src/router'
+import usePrefersColorScheme from '/src/components/CompositionAPI/PrefersColorScheme'
 
 export default {
   name: 'App',
   /* components: {
     HelloWorld
   } */
-  computed: {
-    routes() {
-      return routes
-    },
+  setup() {
+    const { scheme, mode } = usePrefersColorScheme()
+
+    return { routes, scheme, mode }
   },
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
 .app__nav {
-  > a + a {
+  text-align: center;
+
+  > * + * {
     margin-left: 10px;
   }
 }

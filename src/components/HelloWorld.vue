@@ -29,9 +29,5 @@ export default {
       count: 0,
     }
   },
-  created() {
-    const a = {}
-    console.log(a?.b ?? `will done`)
-  },
 }
 </script>

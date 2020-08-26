@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
+  transition: background-color 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    color 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html.dark {
+  body {
+    background-color: $dark;
+    color: $dark-text;
+  }
+}
+
+html.light {
+  body {
+    background-color: $light;
+    color: $light-text;
+  }
+}
