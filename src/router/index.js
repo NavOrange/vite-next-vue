@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 export const routes = [
   {
     path: '/',
-    component: () => import('/src/components/HelloWorld.vue'),
+    component: () => import('/src/views/index/HelloWorld.vue'),
     meta: { title: 'Home' },
     props: {
       msg: 'Hello Vue 3.0 + Vite',
@@ -12,7 +12,7 @@ export const routes = [
 
   {
     path: '/migration',
-    component: () => import('/src/components/MigrationFromVue2/index.vue'),
+    component: () => import('/src/views/migration-from-vue2/index.vue'),
     meta: { title: 'Migration from Vue 2' },
   },
 

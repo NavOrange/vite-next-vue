@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import composition from './CompositionAPI/Template.vue'
+import composition from '/src/components/CompositionAPI/Template.vue'
 
 export default {
   name: 'HelloWorld',

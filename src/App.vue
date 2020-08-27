@@ -16,19 +16,14 @@
   </nav>
 
   <router-view />
-  <!-- <HelloWorld msg="Hello Vue 3.0 + Vite" /> -->
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import { routes } from '/src/router'
-import usePrefersColorScheme from '/src/components/CompositionAPI/PrefersColorScheme'
+import usePrefersColorScheme from '/src/components/PrefersColorScheme'
 
 export default {
   name: 'App',
-  /* components: {
-    HelloWorld
-  } */
   setup() {
     const { scheme, mode } = usePrefersColorScheme()
 
