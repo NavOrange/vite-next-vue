@@ -24,9 +24,7 @@ export const FeatureTeleportOne = defineComponent({
                 <button onClick={() => (this.modalOpen = false)}>Close</button>
               </div>
             </div>
-          ) : (
-            ''
-          )}
+          ) : null}
         </Teleport>
       </>
     )
@@ -52,9 +50,7 @@ export const FeatureTeleportTwo = defineComponent(() => {
               <button onClick={toggle}>Close</button>
             </div>
           </div>
-        ) : (
-          ''
-        )}
+        ) : null}
       </Teleport>
     </>
   )
