@@ -15,12 +15,6 @@ export const routes = [
     component: () => import('/src/views/migration-from-vue2/index.vue'),
     meta: { title: 'Migration from Vue 2' },
   },
-
-  {
-    path: '/parallax',
-    component: () => import('/src/views/parallax/index.vue'),
-    meta: { title: 'Parallax' },
-  },
 ]
 
 export default createRouter({

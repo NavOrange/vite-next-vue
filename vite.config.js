@@ -1,6 +1,5 @@
 import path from 'path'
-import resolve from '@rollup/plugin-node-resolve'
-import babel from '@rollup/plugin-babel'
+import { getBabelOutputPlugin } from '@rollup/plugin-babel'
 
 export default {
   alias: {
@@ -12,7 +11,11 @@ export default {
       rewrite: (path) => path.replace(/^\/api/, ''),
     },
   },
-  rollupInputOptions: {
-    plugins: [resolve(), babel({ babelHelpers: 'bundled' })],
+  rollupOutputOptions: {
+    plugins: [
+      getBabelOutputPlugin({
+        configFile: path.resolve(__dirname, '.babelrc.json'),
+      }),
+    ],
   },
 }
