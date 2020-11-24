@@ -15,6 +15,11 @@ export default defineComponent({
         return false
       }
     },
+
+    'my-event': null,
+  },
+  created() {
+    this.$emit('my-event', 'kebab-case 事件名 不存在任何自动化的大小写转换')
   },
   methods: {
     submitForm(email = 'example@domain.com', password = 'password') {

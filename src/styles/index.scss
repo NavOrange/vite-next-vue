@@ -43,3 +43,63 @@ html.light {
     color: $light-text;
   }
 }
+
+@each $value in left center right {
+  .text-#{$value} {
+    text-align: $value;
+  }
+}
+
+/* Responsive Design */
+/* 风格参考: https://tailwindcss.com/ */
+
+$grid-columns: 24;
+$media-query: (
+  'sm': 640 /* Small (sm) */,
+  'md': 768 /* Medium (md) */,
+  'lg': 1024 /* Large (lg) */,
+  'xl': 1280 /* Extra Large (xl) */,
+);
+@each $tag, $point in $media-query {
+  @media (min-width: #{$point}px) {
+    .#{$tag}\:flex {
+      display: flex !important;
+    }
+
+    .#{$tag}\:flex-column {
+      flex-direction: column !important;
+    }
+
+    .#{$tag}\:justify-center {
+      justify-content: center !important;
+    }
+
+    .#{$tag}\:justify-around {
+      justify-content: space-around !important;
+    }
+
+    .#{$tag}\:justify-between {
+      justify-content: space-between !important;
+    }
+
+    .#{$tag}\:align-center {
+      align-items: center !important;
+    }
+
+    .#{$tag}\:align-self-center {
+      align-self: center !important;
+    }
+
+    @for $index from 1 through $grid-columns {
+      .#{$tag}\:w-#{$index}\/#{$grid-columns} {
+        width: $index / $grid-columns * 100% !important;
+      }
+    }
+
+    @for $index from 1 through 10 {
+      .#{$tag}\:order-#{$index} {
+        order: $index !important;
+      }
+    }
+  }
+}

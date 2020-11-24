@@ -33,6 +33,20 @@
       {{ model.id ? 'update' : 'submit' }}
     </button>
   </form>
+
+  <ul>
+    <li>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
+      placeat voluptas pariatur quas ad molestias maiores quos repudiandae dicta
+      voluptates dolore rem harum vitae maxime optio, aut earum labore non.
+    </li>
+    <li>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+      dignissimos et dolorum corrupti architecto quis nulla iure, error fugiat
+      natus, in unde, excepturi modi tempora accusamus temporibus porro aliquid
+      placeat.
+    </li>
+  </ul>
 </template>
 
 <script>
