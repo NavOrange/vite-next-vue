@@ -152,6 +152,16 @@ export default {
         >more</a
       >
     </dd>
+
+    <dt>Async Components</dt>
+    <dd><AsyncComponentsExample /></dd>
+
+    <dt>RenderFunctionAPI</dt>
+    <dd>
+      <RenderFunctionAPIRender />
+      <RenderFunctionAPISetupWithRender />
+      <CustomDirectiveTemplate v-custom="'123321'" />
+    </dd>
   </dl>
 </template>
 
@@ -165,9 +175,19 @@ import VModel from './VModel.jsx'
 import KeyAttribute from './KeyAttribute.jsx'
 import ArrayRefsWithOptions from './ArrayRefsWithOptions.jsx'
 import ArrayRefsWithComposition from './ArrayRefsWithComposition.jsx'
+import AsyncComponentsExample from './AsyncComponentsExample.jsx'
+import {
+  RenderFunctionAPIRender,
+  RenderFunctionAPISetupWithRender,
+  CustomDirective,
+  CustomDirectiveTemplate,
+} from './RenderFunctionAPI.jsx'
 
 export default {
   name: 'ViewMigrationFromVue2',
+  directives: {
+    custom: CustomDirective,
+  },
   components: {
     FeatureTeleportOne,
     FeatureTeleportTwo,
@@ -178,6 +198,10 @@ export default {
     KeyAttribute,
     ArrayRefsWithOptions,
     ArrayRefsWithComposition,
+    AsyncComponentsExample,
+    RenderFunctionAPIRender,
+    RenderFunctionAPISetupWithRender,
+    CustomDirectiveTemplate,
   },
   setup() {
     return {
