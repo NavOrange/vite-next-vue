@@ -3,6 +3,7 @@ import { getBabelOutputPlugin } from '@rollup/plugin-babel'
 
 export default {
   alias: {
+    // https://github.com/vitejs/vite/issues/1008
     '/src/': path.resolve(__dirname, 'src'),
   },
   proxy: {

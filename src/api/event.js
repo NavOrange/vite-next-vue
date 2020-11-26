@@ -1,3 +1,5 @@
+import request from '/src/utils/request'
+
 /**
  * @typedef {Object} Event
  * @property {string} id
@@ -10,7 +12,7 @@
  * @returns {Promise<Event[]>}
  */
 export function getEvents() {
-  return fetch('/api/event').then((res) => res.json())
+  return request('/event')
 }
 
 /**
@@ -19,7 +21,7 @@ export function getEvents() {
  * @returns {Promise<Event>}
  */
 export function getEventById(id) {
-  return fetch('/api/event/' + id).then((res) => res.json())
+  return request('/event/' + id)
 }
 
 /**
@@ -28,10 +30,10 @@ export function getEventById(id) {
  * @returns {Promise<Event>}
  */
 export function addEvent(data) {
-  return fetch('/api/event', {
+  return request('/event', {
     method: 'POST',
-    body: JSON.stringify(data),
-  }).then((res) => res.json())
+    data,
+  })
 }
 
 /**
@@ -40,9 +42,9 @@ export function addEvent(data) {
  * @returns {Promise<Event>}
  */
 export function updateEvent(data) {
-  return fetch('/api/event/' + data.id, {
+  return request('/event/' + data.id, {
     method: 'PATCH',
-    data: JSON.stringify(data),
+    data,
   })
 }
 
@@ -51,7 +53,7 @@ export function updateEvent(data) {
  * @param {string} id
  */
 export function delEvent(id) {
-  return fetch('/api/event/' + id, {
+  return request('/event/' + id, {
     method: 'DELETE',
   })
 }
