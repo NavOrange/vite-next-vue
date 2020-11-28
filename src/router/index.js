@@ -15,6 +15,12 @@ export const routes = [
     component: () => import('/src/views/migration-from-vue2/index.vue'),
     meta: { title: 'Migration from Vue 2' },
   },
+
+  {
+    path: '/typescript',
+    component: () => import('/src/views/typescript/index.tsx'),
+    meta: { title: 'Typescript' },
+  }
 ]
 
 export default createRouter({

@@ -12,7 +12,7 @@ export const FeatureTeleportOne = defineComponent({
   render() {
     return (
       <>
-        <button onClick={() => (this.modalOpen = true)}>
+        <button onClick={() => (this.modalOpen = true)} v-show={!this.modalOpen}>
           Open full screen modal! (With teleport!)
         </button>
 
