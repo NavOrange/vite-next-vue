@@ -1,4 +1,6 @@
-import { onBeforeUpdate, onUpdated, defineComponent } from 'vue'
+/* eslint-disable no-unused-vars */
+import { h, onBeforeUpdate, onUpdated, defineComponent } from 'vue'
+/* eslint-enable */
 
 export default defineComponent({
   name: 'ArrayRefsWithComposition',

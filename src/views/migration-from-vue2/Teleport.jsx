@@ -1,4 +1,6 @@
-import { Teleport, defineComponent, ref } from 'vue'
+/* eslint-disable no-unused-vars */
+import { h, Fragment, Teleport, defineComponent, ref } from 'vue'
+/* eslint-enable */
 
 import './Teleport.scss'
 

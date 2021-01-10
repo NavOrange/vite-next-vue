@@ -1,4 +1,6 @@
-import { ref, defineAsyncComponent, defineComponent } from 'vue'
+/* eslint-disable no-unused-vars */
+import { h, ref, defineAsyncComponent, defineComponent } from 'vue'
+/* eslint-enable */
 
 let AsyncComponents = null
 

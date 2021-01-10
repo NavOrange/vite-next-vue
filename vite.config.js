@@ -1,22 +1,28 @@
 import path from 'path'
-import { getBabelOutputPlugin } from '@rollup/plugin-babel'
+import { defineConfig } from 'vite'
+import vuePlugin from '@vitejs/plugin-vue'
+import { babel } from '@rollup/plugin-babel'
 
-export default {
-  alias: {
-    // https://github.com/vitejs/vite/issues/1008
-    '/src/': path.resolve(__dirname, 'src'),
+export default defineConfig({
+  alias: [
+    {
+      find: /^@\/(.*)/,
+      replacement: `${path.resolve(__dirname, 'src')}/$1`,
+    },
+  ],
+  plugins: [vuePlugin()],
+  esbuild: {
+    jsxFactory: 'h',
+    jsxFragment: 'Fragment',
   },
-  proxy: {
-    '/api': {
-      target: 'http://localhost:8080/',
-      rewrite: (path) => path.replace(/^\/api/, ''),
+  build: {
+    base: './',
+    rollupOptions: {
+      plugins: [
+        babel({
+          babelHelpers: 'bundled',
+        }),
+      ],
     },
   },
-  rollupOutputOptions: {
-    plugins: [
-      getBabelOutputPlugin({
-        configFile: path.resolve(__dirname, '.babelrc.json'),
-      }),
-    ],
-  },
-}
+})
