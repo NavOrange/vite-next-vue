@@ -39,13 +39,13 @@ export default function usePrefersColorScheme() {
       MediaQueryList.handler = function (event) {
         if (event.matches) scheme.value = schemes[index]
       }
-      MediaQueryList.addListener(MediaQueryList.handler)
+      MediaQueryList.addEventListener('change', MediaQueryList.handler)
     })
   }
 
   function removeListener() {
     MediaQueryLists.forEach((MediaQueryList) => {
-      MediaQueryList.removeListener(MediaQueryList.handler)
+      MediaQueryList.removeEventListener('change', MediaQueryList.handler)
       MediaQueryList.handler = null
     })
   }

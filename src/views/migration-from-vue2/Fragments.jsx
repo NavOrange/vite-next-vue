@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-import { h, Fragment } from 'vue'
-/* eslint-enable */
-
 export default (attrs) => {
   return (
     <>

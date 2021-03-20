@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import { routes } from '/src/router'
-import usePrefersColorScheme from '/src/components/PrefersColorScheme'
+import { routes } from '@/router'
+import usePrefersColorScheme from '@/composables/prefersColorScheme'
 
 export default {
   name: 'App',

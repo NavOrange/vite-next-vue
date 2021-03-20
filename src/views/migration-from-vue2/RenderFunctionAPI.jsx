@@ -45,7 +45,11 @@ export const CustomDirectiveTemplate = (props, context) => {
       nulla quis commodi explicabo nam consectetur dignissimos? At harum ut
       debitis!
     </p>,
-    <h1 onVnodeMounted={(...args) => console.log(JSON.stringify(args, null, 2))}>CustomDirective</h1>,
+    <h1
+      onVnodeMounted={(...args) => console.log(JSON.stringify(args, null, 2))}
+    >
+      CustomDirective
+    </h1>,
     <p onVnodeMounted={() => console.log('p vnode mounted hook')}>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque pariatur
       expedita deserunt facilis culpa rem possimus, eveniet similique error iure

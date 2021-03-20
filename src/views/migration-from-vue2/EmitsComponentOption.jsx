@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { h, defineComponent } from 'vue'
-/* eslint-enable */
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'EmitsComponentOption',

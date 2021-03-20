@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { h, Fragment } from 'vue'
-/* eslint-enable */
+import { h } from 'vue'
 
 export default () => (
   <>

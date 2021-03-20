@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import PrefersColorScheme from '../index'
+import PrefersColorScheme from '../prefersColorScheme'
 
 describe('PrefersColorScheme', () => {
   const wrapper = shallowMount({

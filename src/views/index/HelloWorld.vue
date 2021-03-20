@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="/src/assets/logo.png" />
+  <img alt="Vue logo" src="@/assets/logo.png" />
 
   <h1>{{ msg }}</h1>
   <button @click="count++">count is: {{ count }}</button>
@@ -50,8 +50,8 @@
 </template>
 
 <script>
-import composition from '/src/components/CompositionAPI/Template.vue'
-import { getEvents, addEvent, updateEvent, delEvent } from '/src/api/event'
+import composition from '@/components/CompositionAPI/Template.vue'
+import { getEvents, addEvent, updateEvent, delEvent } from '@/api/event'
 
 export default {
   name: 'HelloWorld',
